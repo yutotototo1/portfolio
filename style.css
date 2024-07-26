@@ -191,30 +191,48 @@ body {
 }
 
 .profile_section {
+  max-width: 1000px;
   position: relative;
+  margin-right: 150px;
 }
 .profile {
   display: flex;
   justify-content: flex-end;
 }
-.profile_design {
-  margin-right: 150px;
-}
 
 .introduction {
   position: absolute;
   top: 140px;
-  right: 700px;
+  /* パーセント指定で */
+  left: 0px;
+  max-width: 470px;
+  width: 40%;
 }
 
-.ipad {
-  width: 470px;
+.introduction > div {
+  position: relative;
 }
+/* .ipad {
+  width: 470px;
+} */
 /* 画面縮小時にiPadが小さくなっていく */
 /* めちゃくちゃ縮小した時にプロフセクションが右端へ行く */
 
 .profile_message_container {
-  width: 60%;
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 名前サイズ、位置微調整 */
+}
+
+.profile_top {
+  display: flex;
+  align-items: flex-end;
+}
+.profile_top > img {
+  width: 31.5%;
 }
 
 .profile_message {
