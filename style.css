@@ -46,7 +46,7 @@ img {
 }
 
 body {
-  background-color: #e8d9bf;
+  background-color: #ede9de;
 }
 
 .pc_nav ul {
@@ -64,6 +64,169 @@ body {
     sans-serif;
 }
 
+.header_wrap {
+  width: 1000px;
+  display: flex;
+  margin: 0 auto;
+}
+
 .header_logo img {
   width: 200px;
+}
+
+.mainvisual {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+.main1 {
+  opacity: 0.3;
+}
+
+.kasaneru5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.kasaneru5 p {
+  z-index: 1;
+}
+
+.main2 {
+  display: flex;
+  margin: 0 auto;
+  max-width: 500px;
+  /* margin-top: -578px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+}
+
+.p1 {
+  font-size: 1.625em;
+  width: 100%;
+  color: #00053a;
+  margin-bottom: 55px;
+}
+
+.p2 {
+  font-size: 1.25em;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 60px;
+  line-height: 2.1875rem;
+  text-align: justify;
+  text-align-last: left;
+  color: #00053a;
+}
+
+.p3 {
+  font-size: 1.5em;
+  background-color: #00053a;
+  color: #fff;
+  width: 40%;
+
+  padding: 15px 0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: fixed;
+  top: 140px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.sidemenu {
+  font-size: 1.25em;
+  color: #00053a;
+  margin-top: 40px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.instagram_icon {
+  margin-top: 360px;
+  width: 30px;
+}
+
+.ask {
+  z-index: 1;
+  position: fixed;
+  top: 750px;
+  right: 200px;
+  cursor: pointer;
+}
+
+.scroll {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.profile_section {
+  position: relative;
+}
+.profile {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile_design {
+  margin-right: 150px;
+}
+
+.introduction {
+  position: absolute;
+  top: 140px;
+  right: 700px;
+}
+
+.ipad {
+  width: 470px;
+}
+/* 画面縮小時にiPadが小さくなっていく */
+/* めちゃくちゃ縮小した時にプロフセクションが右端へ行く */
+
+.profile_message_container {
+  width: 60%;
+}
+
+.profile_message {
+  font-size: 0.875em;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 60px;
+  line-height: 1.3125rem;
+  text-align: justify;
+  text-align-last: left;
+  color: #00053a;
 }
