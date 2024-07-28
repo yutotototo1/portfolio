@@ -166,21 +166,22 @@ body {
 .sidemenu {
   font-size: 1.25em;
   color: #00053a;
-  margin-top: 40px;
+  margin-bottom: 40px;
   cursor: pointer;
   text-align: center;
 }
 
 .instagram_icon {
-  margin-top: 360px;
+  /* margin-top: 40px; */
   width: 30px;
+  margin: 0 auto;
 }
 
 .ask {
   z-index: 1;
   position: fixed;
   top: 750px;
-  right: 200px;
+  right: 60px;
   cursor: pointer;
 }
 
@@ -307,16 +308,13 @@ body {
   color: #00053a;
 }
 
-/* 枠を作る
-白背景を中央に載せる
-その枠の中でスライドショーを作る
-スリックオプションで左右の見切れ表現 */
+/* スリックオプションで左右の見切れ表現 */
 
 .profile_section {
   max-width: 1000px;
   position: relative;
   margin-right: 150px;
-  /* いつの間にか左寄せに、、 */
+  margin-left: auto;
 }
 .profile_subtitle {
   position: absolute;
@@ -361,6 +359,8 @@ body {
   transform: rotate(90deg);
   display: block;
 }
+/* もう少し右に寄せたい */
+/* 右に寄せようとするとサイズが小さくなる？ */
 
 .slideshow_container {
   position: absolute;
@@ -461,3 +461,61 @@ body {
   max-width: 470px;
   width: 40%;
 }
+
+/* ---------works--------------- */
+/* ---------works--------------- */
+/* ---------works--------------- */
+
+/* 
+<!-- ----------------Skill------------------ -->
+<!-- ----------------Skill------------------ -->
+<!-- ----------------Skill------------------ --> */
+
+.works_menu > div {
+  position: relative;
+}
+
+.ipad_skill {
+  display: block;
+  padding-left: 70px;
+}
+
+.skill_section {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+.skill_subtitle {
+  position: absolute;
+  top: 8%;
+  left: 35%;
+  transform: translateX(-50%);
+  color: #00053a;
+  font-size: 1.9375em;
+  text-align: center;
+
+  width: 100%; /* Full width to center the text */
+  z-index: 10; /* Ensure it is above the image */
+}
+
+.skill_design {
+  margin: 0 auto;
+}
+.skill {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skill_menu {
+  position: absolute;
+  top: 140px;
+  /* パーセント指定で */
+  left: 0px;
+  max-width: 470px;
+  width: 40%;
+}
+
+/* 
+<!-- ----------------Skill------------------ -->
+<!-- ----------------Skill------------------ -->
+<!-- ----------------Skill------------------ --> */
