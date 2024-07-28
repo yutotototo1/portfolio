@@ -194,6 +194,24 @@ body {
   max-width: 1000px;
   position: relative;
   margin-right: 150px;
+  /* いつの間にか左寄せに、、 */
+}
+.profile_subtitle {
+  position: absolute;
+  top: 8%;
+  left: 35%;
+  transform: translateX(-50%);
+  color: #00053a;
+  font-size: 1.9375em;
+  text-align: center;
+
+  width: 100%; /* Full width to center the text */
+  z-index: 10; /* Ensure it is above the image */
+  /* ↑2行、消しても変わらず。何のため？時間があれば */
+}
+
+.profile_design {
+  margin-left: 300px;
 }
 .profile {
   display: flex;
@@ -209,6 +227,26 @@ body {
   width: 40%;
 }
 
+.profile_top > div {
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 5%; */
+  max-width: 60%;
+  width: 300px;
+}
+
+.profile_name {
+  font-size: 1.25em;
+  margin: 0 auto;
+  color: #00053a;
+}
+.profile_birth {
+  font-size: 0.875em;
+  margin: 0 auto;
+  padding-top: 5%;
+  color: #00053a;
+}
+
 .introduction > div {
   position: relative;
 }
@@ -220,7 +258,7 @@ body {
 
 .profile_message_container {
   position: absolute;
-  width: 75%;
+  width: 85%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -232,19 +270,194 @@ body {
   align-items: flex-end;
 }
 .profile_top > img {
-  width: 31.5%;
+  width: 35%;
+  padding-left: 5%;
+}
+
+.profile_top > div {
+  margin-bottom: 10%;
+}
+
+.profile_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.profile_container > div {
+  max-width: 50%;
+  width: 250px;
+}
+
+.profile_topic {
+  font-size: 0.875em;
+  line-height: 1.25rem;
+  text-align: justify;
+  text-align-last: left;
+  color: #00053a;
+  padding-right: 6%;
+  max-width: 30%;
+  width: 150px;
 }
 
 .profile_message {
   font-size: 0.875em;
-  overflow-wrap: break-word;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 60px;
-  line-height: 1.3125rem;
+  line-height: 1.25rem;
   text-align: justify;
   text-align-last: left;
   color: #00053a;
+}
+
+/* 枠を作る
+白背景を中央に載せる
+その枠の中でスライドショーを作る
+スリックオプションで左右の見切れ表現 */
+
+.profile_section {
+  max-width: 1000px;
+  position: relative;
+  margin-right: 150px;
+  /* いつの間にか左寄せに、、 */
+}
+.profile_subtitle {
+  position: absolute;
+  top: 8%;
+  left: 35%;
+  transform: translateX(-50%);
+  color: #00053a;
+  font-size: 1.9375em;
+  text-align: center;
+
+  width: 100%; /* Full width to center the text */
+  z-index: 10; /* Ensure it is above the image */
+  /* ↑2行、消しても変わらず。何のため？時間があれば */
+}
+
+.profile_design {
+  margin-left: 300px;
+}
+.profile {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.introduction {
+  position: absolute;
+  top: 140px;
+  /* パーセント指定で */
+  left: 0px;
+  max-width: 470px;
+  width: 40%;
+}
+
+/* ---------works--------------- */
+/* ---------works--------------- */
+/* ---------works--------------- */
+
+.works_menu > div {
+  position: relative;
+}
+
+.ipad_works {
+  transform: rotate(90deg);
+  display: block;
+}
+
+.slideshow_container {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  width: 70%;
+  height: 50%;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides {
+  display: none;
+  position: relative;
+}
+
+.slide_image1 {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.slide_image2 {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.slide_image4 {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.slide_image5 {
+  width: 125%;
+  height: auto;
+  max-width: 300px;
+}
+
+.slide_image3ex {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.slide_image3ch {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+.text {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  color: #00053a;
+  font-size: 1em;
+  padding: 8px 0;
+}
+/* テキスト見切れる */
+/* 調整すると画像も */
+
+.works_section {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+.works_subtitle {
+  position: absolute;
+  top: 8%;
+  left: 35%;
+  transform: translateX(-50%);
+  color: #00053a;
+  font-size: 1.9375em;
+  text-align: center;
+
+  width: 100%; /* Full width to center the text */
+  z-index: 10; /* Ensure it is above the image */
+}
+
+.works_design {
+  margin: 0 auto;
+}
+.works {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.works_menu {
+  position: absolute;
+  top: 140px;
+  /* パーセント指定で */
+  left: 0px;
+  max-width: 470px;
+  width: 40%;
 }
