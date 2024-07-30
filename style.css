@@ -13,12 +13,13 @@ dl,
 dt,
 dd,
 ul,
+button,
 li {
   margin: 0;
   padding: 0;
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
-  color: #4f260b;
+  color: #00053a;
   font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
@@ -49,7 +50,7 @@ body {
   background-color: #ede9de;
 }
 
-.pc_nav ul {
+/* .pc_nav ul {
   display: flex;
   gap: 55px;
 }
@@ -62,10 +63,10 @@ body {
   font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
     sans-serif;
-}
+} */
 
 .header_wrap {
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   margin: 0 auto;
 }
@@ -258,8 +259,6 @@ body {
 /* .ipad {
   width: 470px;
 } */
-/* 画面縮小時にiPadが小さくなっていく */
-/* めちゃくちゃ縮小した時にプロフセクションが右端へ行く */
 
 .profile_message_container {
   position: absolute;
@@ -345,11 +344,12 @@ body {
 .introduction {
   position: absolute;
   top: 140px;
-  /* パーセント指定で */
   left: 0px;
   max-width: 470px;
   width: 40%;
 }
+
+/* 1050px以下でiPad内リサイズが必要 */
 
 /* ---------works--------------- */
 /* ---------works--------------- */
@@ -363,8 +363,6 @@ body {
   transform: rotate(90deg);
   display: block;
 }
-/* もう少し右に寄せたい */
-/* 右に寄せようとするとサイズが小さくなる？ */
 
 .slideshow_container {
   position: absolute;
@@ -415,13 +413,12 @@ body {
   font-size: 1em;
   padding: 20px 0;
 }
-/* テキスト見切れる */
-/* 調整すると画像も */
 
 .works_section {
   max-width: 1000px;
   position: relative;
   margin: 0 auto;
+  margin-left: 80px;
 }
 .works_subtitle {
   position: absolute;
@@ -528,9 +525,6 @@ body {
 <!-- ----------------Skill------------------ -->
 <!-- ----------------Skill------------------ --> */
 
-/* めちゃくちゃ崩れやすい、、、 */
-/* 1000px以下でSP表示とかありですか？ */
-
 /* <!-- --------------Contact----------------
 --------------Contact----------------
 --------------Contact---------------- --> */
@@ -619,8 +613,10 @@ body {
 }
 .c-form__submit button {
   font-size: 1.5em;
-  font-family: "游明朝";
-  /* フォント変更不可？ */
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+
   color: #fff;
   background-color: #00053a;
   /* border: solid 1px #00053a; */
@@ -670,3 +666,88 @@ body {
   color: #00053a;
 }
 /* --------------fooder------------- */
+
+/* ---------------THANKS PAGE------------- */
+.thankspage {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.thanks1 {
+  font-size: 3em;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.thanks2 {
+  font-size: 1em;
+  line-height: 1.75em;
+}
+
+/* ---------------THANKS PAGE------------- */
+
+/* ーーーーーーーーーーーーworks一覧ーーーーーーーーーーーーー */
+
+.workspage {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.worksp {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.works_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.squarebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 450px;
+  height: 450px;
+  background-color: #f2f0eb;
+}
+.squarebox > div {
+  position: absolute;
+  margin-top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.works_topic1 {
+  font-size: 0.875em;
+}
+.works_topic2 {
+  font-size: 1.125em;
+  margin-top: 5px;
+}
+
+.works1 .works2 .works3 {
+  padding: 0 auto;
+}
+.works1 {
+  width: 380px;
+}
+.works2 {
+  width: 300px;
+}
+.works3ex {
+  width: 300px;
+}
+.works3pop {
+  width: 380px;
+}
+/* 900px以降は縦並びへ */
+/* ーーーーーーーーーーーーworks一覧ーーーーーーーーーーーーー */
