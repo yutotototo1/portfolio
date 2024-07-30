@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+<script type="text/javascript">
+    let submitted = false;
+</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+    onload="if(submitted){window.location='./thnks.html';}"></iframe>
+
 <body>
 
     <div class="header_wrap">
@@ -49,6 +56,7 @@
         <a href="./contact.html" class="sidemenu">Contact</a>
         <div class="instalink"><a href="https://www.instagram.com/seagull_smartphone/"><img class="instagram_icon"
                     src=".//images/Instagram_Glyph_Black.png" alt="instagram link"></a>
+
         </div>
 
     </div>
@@ -152,8 +160,11 @@
                         <div class="text">キャンペーン告知バナー</div>
                     </div>
                     <div class="slides fade">
-                        <img src=".//images/kadai02_egawa_02.jpg" class="slide_image2">
-                        <div class="text">旅行アプリ用バナー</div>
+                        <div class="slide2">
+
+                            <img src=".//images/kadai02_egawa_02.jpg" class="slide_image2">
+                            <div class="text">旅行アプリ用バナー</div>
+                        </div>
                     </div>
                     <div class="slides fade">
                         <img src=".//images/課題４モックアップ.png" class="slide_image4">
@@ -162,11 +173,13 @@
 
                     <div class="slides fade">
                         <img src=".//images/課題５モックアップ.png" class="slide_image5">
-                        <div class="text">美容室HPリニューアル</div>s
+                        <div class="text">美容室HPリニューアル</div>
                     </div>
                     <div class="slides fade">
-                        <img src=".//images/高級３.jpg" class="slide_image3ex">
-                        <div class="text">新商品告知A/Bテスト用バナー</div>
+                        <div class="slide3">
+                            <img src=".//images/高級３.jpg" class="slide_image3ex">
+                            <div class="text">新商品告知A/Bテスト用バナー</div>
+                        </div>
                     </div>
                     <div class="slides fade">
                         <img src=".//images/ポップ02.jpg" class="slide_image3ch">
@@ -251,7 +264,7 @@
         <div class="contactform">
             <form
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdqPP-AhOlIqsoFYqwO-cGsNpVq7s2No7evp2fcUw45sapU8A/formResponse"
-                method="POST">
+                method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
                 <div class="contactform_list">
                     <p class="form_topic">Name</p>
                     <input name="entry.1331074417" class="c-form_input" id="field-name" placeholder="デザイン 太郎"
@@ -310,13 +323,15 @@
 
     </div>
     <div class="copyright">
-        <h3>©atelier.web</h3>
+        <p>©atelier.web</p>
     </div>
 
 
 
 
     <!-- ---------------fooder--------------- -->
+
+
 
     <script>
         let slideIndex = 0;

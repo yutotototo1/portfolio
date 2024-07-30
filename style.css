@@ -157,6 +157,7 @@ body {
 }
 
 .sidebar {
+  z-index: 1;
   position: fixed;
   top: 140px;
   right: 60px;
@@ -183,7 +184,7 @@ body {
 .ask {
   z-index: 1;
   position: fixed;
-  top: 750px;
+  top: 550px;
   right: 60px;
   cursor: pointer;
 }
@@ -383,22 +384,20 @@ body {
   position: relative;
 }
 
-.slide_image1 {
+.slide_image1 .slide_image2 .slide_image4 .slide_image3ch .slide_image3ex {
   width: 100%;
   height: auto;
   max-width: 300px;
 }
 
-.slide_image2 {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
+.slide2 {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.slide_image4 {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
+.slide3 {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .slide_image5 {
@@ -407,25 +406,14 @@ body {
   max-width: 300px;
 }
 
-.slide_image3ex {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-}
-
-.slide_image3ch {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-}
 .text {
-  position: absolute;
+  /* position: absolute; */
   bottom: 8px;
   width: 100%;
   text-align: center;
   color: #00053a;
   font-size: 1em;
-  padding: 8px 0;
+  padding: 20px 0;
 }
 /* テキスト見切れる */
 /* 調整すると画像も */
@@ -677,5 +665,8 @@ body {
   justify-content: center;
   color: #00053a;
   margin-bottom: 20px;
+}
+.copyright > p {
+  color: #00053a;
 }
 /* --------------fooder------------- */
