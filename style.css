@@ -200,7 +200,14 @@ body {
   max-width: 1000px;
   position: relative;
   margin-right: 150px;
-  /* いつの間にか左寄せに、、 */
+}
+
+.profile_section .circle {
+  width: 5%;
+  height: 20px;
+  position: absolute;
+  top: 27%;
+  right: 18%;
 }
 .profile_subtitle {
   position: absolute;
@@ -420,6 +427,15 @@ body {
   margin: 0 auto;
   margin-left: 80px;
 }
+
+.works_section .circle {
+  width: 5%;
+  height: 20px;
+  position: absolute;
+  top: 27%;
+  right: 18%;
+}
+
 .works_subtitle {
   position: absolute;
   top: 8%;
@@ -776,6 +792,7 @@ body {
 .works_each3 {
   font-size: 1.25;
   padding-top: 20px;
+  line-height: 40px;
 }
 
 .back {

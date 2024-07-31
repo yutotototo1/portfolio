@@ -71,8 +71,9 @@
 
         <div class="profile">
             <img class="profile_design" src=".//images/図面_profile.webp" alt="profile_design">
-            <h2 class="profile_subtitle">Profile</h2>
+            <h2 id="profile_line" class="profile_subtitle">Profile</h2>
         </div>
+        <span id="profile_circle" class="circle"></span>
         <div class="introduction">
             <div>
                 <img class="ipad" src=".//images/ipad.webp" alt="introduction">
@@ -145,8 +146,9 @@
 
         <div class="works">
             <img class="works_design" src=".//images/Works 図面.webp" alt="works_design">
-            <h2 class="works_subtitle">Works</h2>
+            <h2 id="works_line" class="works_subtitle">Works</h2>
         </div>
+        <span id="works_circle" class="circle"></span>
         <div class="works_menu">
             <div>
                 <img class="ipad_works" src=".//images/ipad.webp" alt="works_menu">
@@ -349,6 +351,53 @@
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
     </script>
+    <script src="./anseki-leader-line-6c26a9d/leader-line.min.js"></script>
+    <script>
+
+
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                const profileLine = new LeaderLine(
+                    document.getElementById('profile_line'),
+                    document.getElementById('profile_circle'),
+                    {
+                        color: '#00053A',
+                        size: 1.5,
+                        endPlug: 'behind',
+                        startSocket: 'bottom',
+                        endSocket: 'top'
+
+
+                    }
+
+                );
+            })
+        })()
+
+
+            (() => {
+                document.addEventListener('DOMContentLoaded', () => {
+                    const profileLine = new LeaderLine(
+                        document.getElementById('works_line'),
+                        document.getElementById('works_circle'),
+                        {
+                            color: '#00053A',
+                            size: 1.5,
+                            endPlug: 'behind',
+                            startSocket: 'bottom',
+                            endSocket: 'top'
+
+
+                        }
+
+                    );
+                })
+            })()
+
+
+
+    </script>
+
 
 </body>
 
