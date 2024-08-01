@@ -802,4 +802,194 @@ body {
   padding-top: 130px;
 }
 
+.sp_mainvisual {
+  display: none;
+}
+.sp_concept {
+  display: none;
+}
+.scroll_sp {
+  display: none;
+}
 /* -----------------works詳細ページーーーーーーーーーーーーー */
+
+/* テスト、SP表示 */
+
+@media screen and (max-width: 767px) {
+  .header_logo {
+    width: 14%;
+  }
+
+  .fooder {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  .mainvisual {
+    display: none;
+  }
+  .sp_menu {
+    z-index: 1;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    /* 重なり具合の調節１＜２ */
+    z-index: 2;
+  }
+
+  .sp_btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #00053a;
+    position: relative;
+    top: 10px;
+
+    /* ボタンの変化 */
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #00053a;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+
+  /* ばつ印 */
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  /* ばつ印 */
+
+  .sp_mainvisual {
+    display: block;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sp_main1 {
+    opacity: 0.3;
+    width: 100%;
+    height: auto;
+    position: relative; /* sp_main2を重ねるためにrelativeに設定 */
+  }
+
+  .sp_main_flame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 632px;
+    z-index: 10;
+  }
+
+  .sp_main2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .sp_center_logo {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    max-width: 55%;
+    height: auto;
+    z-index: 20;
+  }
+
+  .sp_concept {
+    display: block;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .p2_sp {
+    font-size: 1em;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 500px;
+    /* margin: 0 auto; */
+    box-sizing: border-box;
+    padding: 0 20px;
+    line-height: 2.1875rem;
+    text-align: justify;
+    text-align-last: left;
+    color: #00053a;
+  }
+  .sp_ask {
+    display: flex;
+    justify-content: center;
+  }
+
+  .scroll_sp {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .p3 {
+    font-size: 1em;
+    background-color: #00053a;
+    color: #fff;
+    width: 30%;
+
+    padding: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+
+  .contact_section {
+    display: none;
+  }
+  /* ---stop-- */
+}
+
+.profile_section {
+  display: none;
+}
