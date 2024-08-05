@@ -8,11 +8,21 @@
     </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 
 
 <body>
+
+    <div class="js_curtain">
+        <img class="js_curtain_loading" src="./images/ローディング２.gif" alt="load">
+    </div>
+
+
 
     <div class="header_wrap">
 
@@ -108,9 +118,9 @@
 
     <div class="sidebar">
         <a href="./index.html" class="sidemenu">Home</a>
-        <a href="./profile.html" class="sidemenu">Profile</a>
+        <a href="./index.html#profile" class="sidemenu">Profile</a>
         <a href="./works.html" class="sidemenu">Works</a>
-        <a href="#skill" class="sidemenu">Skill</a>
+        <a href="./index.html#skill" class="sidemenu">Skill</a>
         <a href="./contact.html" class="sidemenu">Contact</a>
         <div class="instalink"><a href="https://www.instagram.com/seagull_smartphone/"><img class="instagram_icon"
                     src=".//images/Instagram_Glyph_Black.png" alt="instagram link"></a>
@@ -223,34 +233,34 @@
             <div>
                 <img class="ipad_works" src=".//images/ipad.webp" alt="works_menu">
                 <div class="slideshow_container">
-                    <div class="slides fade">
-                        <img src=".//images/kadai01_egawa_03.jpg" class="slide_image1">
+                    <div class="slides fade"><a href="./works.html ">
+                            <img src=".//images/kadai01_egawa_03.jpg" class="slide_image1"></a>
                         <div class="text">キャンペーン告知バナー</div>
                     </div>
                     <div class="slides fade">
                         <div class="slide2">
-
-                            <img src=".//images/kadai02_egawa_02.jpg" class="slide_image2">
+                            <a href="./works.html ">
+                                <img src=".//images/kadai02_egawa_02.jpg" class="slide_image2"></a>
                             <div class="text">旅行アプリ用バナー</div>
                         </div>
                     </div>
-                    <div class="slides fade">
-                        <img src=".//images/課題４モックアップ.png" class="slide_image4">
+                    <div class="slides fade"><a href="./works.html ">
+                            <img src=".//images/課題４モックアップ.png" class="slide_image4"></a>
                         <div class="text">会員制コワーキングスペースLP</div>
                     </div>
 
-                    <div class="slides fade">
-                        <img src=".//images/課題５モックアップ.png" class="slide_image5">
+                    <div class="slides fade"><a href="./works.html ">
+                            <img src=".//images/課題５モックアップ.png" class="slide_image5"></a>
                         <div class="text">美容室HPリニューアル</div>
                     </div>
                     <div class="slides fade">
-                        <div class="slide3">
-                            <img src=".//images/高級３.jpg" class="slide_image3ex">
+                        <div class="slide3"><a href="./works.html ">
+                                <img src=".//images/高級３.jpg" class="slide_image3ex"></a>
                             <div class="text">新商品告知A/Bテスト用バナー</div>
                         </div>
                     </div>
-                    <div class="slides fade">
-                        <img src=".//images/ポップ02.jpg" class="slide_image3ch">
+                    <div class="slides fade"><a href="./works.html ">
+                            <img src=".//images/ポップ02.jpg" class="slide_image3ch"></a>
                         <div class="text">新商品告知A/Bテスト用バナー</div>
                     </div>
                 </div>
@@ -517,6 +527,22 @@
             });
         })
 
+    </script>
+    <script>
+        function loadingAnimation() {
+            document.addEventListener("DOMContentLoaded", function () {
+                // 8秒経過で徐々にフェードアウト
+                setTimeout(function () {
+                    document.querySelector(".js_curtain").style.opacity = "0";
+                }, 6000);
+
+                // フェードアウト終了後に完全に非表示にする
+                setTimeout(function () {
+                    document.querySelector(".js_curtain").style.display = "none";
+                }, 7000); // フェードアウト時間（1秒）を考慮
+            });
+        }
+        loadingAnimation();
     </script>
 </body>
 

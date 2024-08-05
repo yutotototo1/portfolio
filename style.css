@@ -24,11 +24,29 @@ li {
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 /* * {
   outline: 2px red solid;
-} 
-めちゃくちゃ便利レイアウト崩れた時はこれ*/
+}
+めちゃくちゃ便利レイアウト崩れた時はこれ  */
+
+.js_curtain {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-in-out; /* フェードアウトのためのトランジション */
+  opacity: 1;
+}
+.js_curtain_loading {
+  width: 100%;
+}
 
 a {
   /*下線を消す*/
@@ -217,6 +235,8 @@ body {
   right: 18%;
 }
 .profile_subtitle {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
   position: absolute;
   top: 8%;
   left: 35%;
@@ -436,6 +456,8 @@ body {
 }
 
 .works_subtitle {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
   position: absolute;
   top: 8%;
   left: 35%;
@@ -494,6 +516,8 @@ body {
 }
 
 .skill_subtitle {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
   position: absolute;
   top: 8%;
   left: 35%;
@@ -565,6 +589,8 @@ body {
   margin: 0 auto;
 }
 .contact_subtitle {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
   position: absolute;
   top: 8%;
   left: 35%;
@@ -846,7 +872,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .header_logo {
-    width: 14%;
+    width: 25%;
   }
 
   .sidebar {
@@ -1317,5 +1343,97 @@ body {
   .blank {
     width: 100%;
     padding: 25px 0;
+  }
+
+  /* ーーーーーspworks一覧ーーーーーー */
+  .workspage {
+    width: 375px;
+  }
+  .works_list {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .copyright {
+    max-width: 375px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .header_wrap {
+    max-width: 375px;
+  }
+  .squarebox {
+    width: 100%;
+    width: 350px;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    margin-top: 0;
+  }
+
+  .squarebox > div {
+    margin-top: 400px;
+  }
+
+  .works1 {
+    width: 300px;
+  }
+
+  .works3pop {
+    width: 300px;
+  }
+  .works4 {
+    width: 300px;
+  }
+  /* .copyright {
+    margin-top: 180px;
+  } */
+  .worksp {
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-size: 1.25em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .back {
+    padding-top: 0;
+    width: 100px;
+  }
+  .sp_fooder2 {
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+
+  /* ーーーーーspworks一覧ーーーーーー */
+
+  /* --------spworks各Pーーーーーーー */
+
+  .works_each {
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+
+  .works_each3 {
+    padding-top: 0;
+    line-height: 30px;
+  }
+
+  .works_each2 {
+    line-height: 40px;
+    padding-top: 0;
+  }
+  /* --------spworks各Pーーーーーーー */
+  .copyright {
+    display: none;
+  }
+  .thanks1 {
+    margin: 0 auto;
+  }
+  .thankspage {
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: initial;
   }
 }
