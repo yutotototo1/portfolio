@@ -95,7 +95,7 @@
         <a href="./index.html" class="sidemenu">Home</a>
         <a href="./profile.html" class="sidemenu">Profile</a>
         <a href="./works.html" class="sidemenu">Works</a>
-        <a href="./skill.html" class="sidemenu">Skill</a>
+        <a href="#skill" class="sidemenu">Skill</a>
         <a href="./contact.html" class="sidemenu">Contact</a>
         <div class="instalink"><a href="https://www.instagram.com/seagull_smartphone/"><img class="instagram_icon"
                     src=".//images/Instagram_Glyph_Black.png" alt="instagram link"></a>
@@ -119,6 +119,12 @@
         <div class="profile">
             <img class="profile_design" src=".//images/図面_profile.webp" alt="profile_design">
             <h2 id="profile_line" class="profile_subtitle">Profile</h2>
+        </div>
+
+        <div class="sp_profile">
+            <img class="sp_profile_design" src=".//images/図面_profile.webp" alt="profile_design">
+
+
         </div>
         <span id="profile_circle" class="circle"></span>
         <div class="introduction">
@@ -162,7 +168,7 @@
                         <p class="profile_topic">ひとこと</p>
                         <div>
                             <p class="profile_message">
-                                住宅営業で培った提案力と、
+                                住宅営業で培った提案力と、<br>
                                 ネット商売歴15年のノウハウを武器に精一杯お手伝いします。</p>
                         </div>
                     </section>
@@ -252,29 +258,37 @@
     <!-- ----------------Skill------------------ -->
     <!-- ----------------Skill------------------ -->
 
-    <section class="skill_section">
+    <section class="skill_section" id="skill">
 
 
 
         <div class="skill">
             <img class="skill_design" src=".//images/Skill_図面.webp" alt="skill_design">
-            <h2 class="skill_subtitle">Skill</h2>
+            <h2 id="skill_line" class="skill_subtitle">Skill</h2>
         </div>
+        <span id="skill_circle" class="circle"></span>
         <div class="skill_menu">
             <div>
                 <img class="ipad_skill" src=".//images/Skill _ipad.webp" alt="skill_menu">
                 <div class="skill_list_container">
-                    <div>
-                        <p class="skill_list">・商品写真撮影</p>
-                        <p class="skill_list">・レタッチ</p>
+
+                    <div><img class="skill_icon" src=".//images/PS.png" alt="icon">
+                        <div class="skill_text">
+                            <p class="skill_list">・商品写真撮影</p>
+                            <p class="skill_list">・レタッチ</p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="skill_list">・LPデザイン</p>
-                        <p class="skill_list">・バナーデザイン</p>
+                    <div><img class="skill_icon" src=".//images/Ai.png" alt="icon">
+                        <div class="skill_text">
+                            <p class="skill_list">・LPデザイン</p>
+                            <p class="skill_list">・バナーデザイン</p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="skill_list">・運用代行</p>
-                        <p class="skill_list">・アカウント設計</p>
+                    <div><img class="skill_icon" src=".//images/insta.png" alt="icon">
+                        <div class="skill_text">
+                            <p class="skill_list">・運用代行</p>
+                            <p class="skill_list">・アカウント設計</p>
+                        </div>
                     </div>
 
 
@@ -380,8 +394,16 @@
     <div class="copyright">
         <p>©atelier.web</p>
     </div>
+    <div class="sp_fooder">
+        <div class="sp_fooder_logo">
+            <a href="./index.html"> <img class="logo2" src="./images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="sp_copyright">
+            <p>©atelier.web</p>
+        </div>
 
-
+    </div>
     <!-- ---------------fooder--------------- -->
 
 
@@ -423,31 +445,42 @@
                         endPlug: 'behind',
                         startSocket: 'bottom',
                         endSocket: 'top'
-
-
                     }
 
+
                 );
+                //----ここからーー
+                const worksLine = new LeaderLine(
+                    document.getElementById('works_line'),
+                    document.getElementById('works_circle'),
+                    {
+                        color: '#00053A',
+                        size: 1.5,
+                        endPlug: 'behind',
+                        startSocket: 'bottom',
+                        endSocket: 'top'
+                    }
+                );
+                //-------
+                const skillLine = new LeaderLine(
+                    document.getElementById('skill_line'),
+                    document.getElementById('skill_circle'),
+                    {
+                        color: '#00053A',
+                        size: 1.5,
+                        endPlug: 'behind',
+                        startSocket: 'bottom',
+                        endSocket: 'top'
+                    }
+                );
+
             })
         })()
 
 
             (() => {
                 document.addEventListener('DOMContentLoaded', () => {
-                    const profileLine = new LeaderLine(
-                        document.getElementById('works_line'),
-                        document.getElementById('works_circle'),
-                        {
-                            color: '#00053A',
-                            size: 1.5,
-                            endPlug: 'behind',
-                            startSocket: 'bottom',
-                            endSocket: 'top'
 
-
-                        }
-
-                    );
                 })
             })()
 

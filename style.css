@@ -196,10 +196,12 @@ body {
   margin: 60px 0;
 }
 
+/* -------------Profile------------------ */
+
 .profile_section {
   max-width: 1000px;
   position: relative;
-  margin-right: 150px;
+  /* margin-right: 150px; */
 }
 
 .profile_section .circle {
@@ -224,20 +226,19 @@ body {
 }
 
 .profile_design {
-  margin-left: 300px;
+  /* margin-left: 300px;
+   */
+
+  max-width: 100%; /* 画像の最大幅を親要素に合わせる */
+  height: auto; /* アスペクト比を維持 */
+  margin: 0 auto; /* 中央揃え */
 }
 .profile {
   display: flex;
-  justify-content: flex-end;
-}
-
-.introduction {
-  position: absolute;
-  top: 140px;
-  /* パーセント指定で */
-  left: 0px;
-  max-width: 470px;
-  width: 40%;
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 垂直中央揃え */
+  max-width: 1000px; /* 必要に応じて最大幅を設定 */
+  margin: 0 auto; /* 中央揃え */
 }
 
 .profile_top > div {
@@ -246,6 +247,7 @@ body {
   /* padding-left: 5%; */
   max-width: 60%;
   width: 300px;
+  margin-bottom: 10%;
 }
 
 .profile_name {
@@ -285,10 +287,6 @@ body {
   padding-left: 5%;
 }
 
-.profile_top > div {
-  margin-bottom: 10%;
-}
-
 .profile_container {
   display: flex;
   justify-content: center;
@@ -318,34 +316,11 @@ body {
   color: #00053a;
 }
 
-/* スリックオプションで左右の見切れ表現 */
-
 .profile_section {
   max-width: 1000px;
-  position: relative;
-  margin-right: 150px;
-  margin-left: auto;
-}
-.profile_subtitle {
-  position: absolute;
-  top: 8%;
-  left: 35%;
-  transform: translateX(-50%);
-  color: #00053a;
-  font-size: 1.9375em;
-  text-align: center;
-
-  width: 100%; /* Full width to center the text */
-  z-index: 10; /* Ensure it is above the image */
-  /* ↑2行、消しても変わらず。何のため？時間があれば */
-}
-
-.profile_design {
-  margin-left: 300px;
-}
-.profile {
-  display: flex;
-  justify-content: flex-end;
+  /* position: relative; */
+  /* margin-right: 150px;
+  margin-left: auto; */
 }
 
 .introduction {
@@ -354,6 +329,25 @@ body {
   left: 0px;
   max-width: 470px;
   width: 40%;
+}
+
+@media screen and (max-width: 1050px) {
+  .profile_message {
+    font-size: 40%;
+    line-height: 150%;
+  }
+  .profile_topic {
+    font-size: 40%;
+  }
+  .profile_top > img {
+    width: 20%;
+  }
+  /* .profile_top > div {
+  } */
+
+  .profile_top {
+    font-size: 70%;
+  }
 }
 
 /* 1050px以下でiPad内リサイズが必要 */
@@ -406,7 +400,7 @@ body {
 }
 
 .slide_image5 {
-  width: 125%;
+  width: 105%;
   height: auto;
   max-width: 300px;
 }
@@ -432,8 +426,8 @@ body {
   width: 5%;
   height: 20px;
   position: absolute;
-  top: 27%;
-  right: 18%;
+  top: 40%;
+  right: 32%;
 }
 
 .works_subtitle {
@@ -475,10 +469,6 @@ body {
 <!-- ----------------Skill------------------ -->
 <!-- ----------------Skill------------------ --> */
 
-/* .skill_menu > div {
-  position: relative;
-} */
-
 .ipad_skill {
   display: block;
   padding-left: 70px;
@@ -489,6 +479,15 @@ body {
   position: relative;
   margin: 0 auto;
 }
+
+.skill_section .circle {
+  width: 5%;
+  height: 20px;
+  position: absolute;
+  top: 36%;
+  right: 16%;
+}
+
 .skill_subtitle {
   position: absolute;
   top: 8%;
@@ -513,7 +512,6 @@ body {
 .skill_menu {
   position: absolute;
   top: 140px;
-  /* パーセント指定で */
   left: 0px;
   max-width: 470px;
   width: 40%;
@@ -522,18 +520,29 @@ body {
   position: absolute;
   width: 86%;
   top: 40%;
-  left: 100%;
+  left: 85%;
   transform: translate(-50%, -50%);
-  /* 名前サイズ、位置微調整 */
+}
+.skill_icon {
+  width: 15%;
+  height: 15%;
 }
 
 .skill_list_container > div {
   font-size: 1em;
   margin-bottom: 14.5%;
+  display: flex;
 }
+.skill_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .skill_list {
   color: #00053a;
   line-height: 1.5em;
+  padding-left: 10px;
 }
 
 /* 
@@ -811,18 +820,31 @@ body {
 .scroll_sp {
   display: none;
 }
-/* -----------------works詳細ページーーーーーーーーーーーーー */
 
-/* テスト、SP表示 */
+.sp_profile {
+  display: none;
+}
+
+.sp_fooder_logo {
+  display: none;
+}
+.sp_copyright {
+  display: none;
+}
+
+/* -----------------works詳細ページーーーーーーーーーーーーー */
+/* 以下SP */
+
+/* SP表示 */
 
 @media screen and (max-width: 767px) {
   .header_logo {
     width: 14%;
   }
 
-  .fooder {
+  /* .fooder {
     display: none;
-  }
+  } */
   .sidebar {
     display: none;
   }
@@ -834,6 +856,16 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
+  }
+
+  .ask {
+    z-index: 1;
+    position: fixed;
+    top: 450px;
+    right: 10px;
+    cursor: pointer;
+    height: 50%;
+    width: 50px;
   }
 
   .sp_btn {
@@ -957,7 +989,7 @@ body {
     display: block;
     display: flex;
     justify-content: center;
-    margin: 60px 0;
+    margin: 40px 0;
   }
 
   .scroll {
@@ -984,12 +1016,237 @@ body {
     box-sizing: border-box;
   }
 
-  .contact_section {
+  /* ーーーーーーSP Profile --------- */
+
+  .introduction {
+    position: static;
+    width: 100%; /* 親要素を画面幅いっぱいに設定 */
+    padding: 0; /* 不要なパディングを削除 */
+    margin: 0 auto;
+  }
+
+  .ipad {
     display: none;
   }
-  /* ---stop-- */
-}
+  .profile_section {
+    margin-right: none;
+    margin-left: none;
+  }
+  .profile_design {
+    display: none;
+  }
 
-.profile_section {
-  display: none;
+  .sp_profile {
+    display: block;
+  }
+  .profile_top {
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+    align-items: center; /* 中央揃え */
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .profile_top > img {
+    width: 42%;
+    margin-top: 5px;
+    padding-left: 0;
+  }
+
+  .profile_message_container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: static;
+    transform: none;
+  }
+
+  .profile_subtitle {
+    font-size: 1.5em;
+    transform: none;
+    top: 20px;
+    left: 6.6%;
+    text-align: initial;
+  }
+  .profile_top > div {
+    padding-top: 12px;
+    margin-bottom: 0;
+  }
+  .profile_name {
+    font-size: 1.25em;
+  }
+  .profile_birth {
+    font-size: 1em;
+  }
+
+  /* .profile_section,
+  .profile_top,
+  .profile_container {
+    width: 100%; 
+  } */
+
+  .profile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 0;
+  }
+  .profile_topic {
+    font-size: 0.75em;
+  }
+  .profile_message {
+    font-size: 1em;
+  }
+
+  .profile_container > div {
+    max-width: 90%;
+    width: auto;
+    text-align: left;
+  }
+
+  .profile_section .circle {
+    width: 5%;
+    height: 20px;
+    position: absolute;
+    top: 9%;
+    right: 16%;
+  }
+
+  /* --------sp works------- */
+
+  .works_section {
+    margin-left: 0;
+  }
+
+  .works_menu {
+    position: static;
+    /* top: 140px; */
+    margin: 0 auto;
+    /* left: 0px; */
+    width: 77%;
+  }
+
+  .works_menu > div {
+    margin-top: -130px;
+    margin-right: 15px;
+    margin-left: 15px;
+    max-height: 440px;
+  }
+
+  .slideshow_container {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    height: 90%;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    /* position: absolute; */
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    color: #00053a;
+    font-size: 0.75em;
+    padding: 20px 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .slideshow_container {
+      position: absolute;
+      top: 25%;
+      left: 15%;
+      width: 70%;
+      height: 60%;
+      overflow: hidden;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide_image5 {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+    }
+  }
+
+  .skill_menu {
+    position: static;
+    top: 140px;
+    left: 10%;
+    right: 10%;
+    margin: 0 auto;
+    max-width: 470px;
+    width: 77%;
+  }
+
+  .ipad_skill {
+    display: block;
+    padding-left: 0;
+  }
+  .skill_list_container {
+    width: 63%;
+    left: 30%;
+    transform: none;
+    top: 48%;
+  }
+
+  .skill_list_container > div {
+    margin-bottom: 11.5%;
+    font-size: 0.875em;
+  }
+
+  /* ------sp_contact-------- */
+  .contact_design {
+    height: 135%;
+  }
+
+  .c-form_input {
+    width: auto;
+  }
+  .c-form_input2 {
+    width: 100%;
+  }
+
+  .contact {
+    height: 300px;
+  }
+
+  .fooder_menu {
+    display: none;
+  }
+  .fooder {
+    display: block;
+  }
+
+  .fooder_logo {
+    display: none;
+  }
+
+  .sp_fooder_logo {
+    display: block;
+  }
+
+  .sp_copyright {
+    display: block;
+    display: flex;
+    justify-content: center;
+    color: #00053a;
+    margin-bottom: 20px;
+  }
+
+  .sp_fooder {
+    width: 100%;
+    margin-top: 115px;
+  }
 }
