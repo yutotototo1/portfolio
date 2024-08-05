@@ -25,6 +25,11 @@ li {
     "ＭＳ 明朝", serif;
 }
 
+/* * {
+  outline: 2px red solid;
+} 
+めちゃくちゃ便利レイアウト崩れた時はこれ*/
+
 a {
   /*下線を消す*/
   text-decoration: none;
@@ -334,7 +339,7 @@ body {
 @media screen and (max-width: 1050px) {
   .profile_message {
     font-size: 40%;
-    line-height: 150%;
+    line-height: 170%;
   }
   .profile_topic {
     font-size: 40%;
@@ -855,14 +860,14 @@ body {
     z-index: 1;
     position: fixed;
     top: 10px;
-    right: 10px;
+    left: 90%;
   }
 
   .ask {
     z-index: 1;
     position: fixed;
     top: 450px;
-    right: 10px;
+    left: 85%;
     cursor: pointer;
     height: 50%;
     width: 50px;
@@ -1068,6 +1073,7 @@ body {
     top: 20px;
     left: 6.6%;
     text-align: initial;
+    width: 100px;
   }
   .profile_top > div {
     padding-top: 12px;
@@ -1097,6 +1103,12 @@ body {
   }
   .profile_topic {
     font-size: 0.75em;
+    border-bottom: 1px solid #00053a;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    line-height: 12px;
+    width: 60px;
+    margin-bottom: 5px;
   }
   .profile_message {
     font-size: 1em;
@@ -1219,7 +1231,7 @@ body {
   }
 
   .contact {
-    height: 300px;
+    height: 360px;
   }
 
   .fooder_menu {
@@ -1247,6 +1259,11 @@ body {
 
   .sp_fooder {
     width: 100%;
-    margin-top: 115px;
+    margin-top: 150px;
+  }
+  .sp_logo2 {
+    width: 120px;
+    display: flex;
+    margin: 0 auto;
   }
 }
