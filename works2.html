@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -80,6 +81,21 @@
         <p>©atelier.web</p>
     </div>
 
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $('.header_slider').slick({
+                // autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+        })
+
+    </script>
 </body>
 
 </html>

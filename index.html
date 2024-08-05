@@ -30,6 +30,21 @@
             <span></span>
         </div>
     </div>
+
+    <nav class="sp_nav">
+
+        <ul>
+            <li><a href="./index.html">Home</a> </li>
+            <li><a href="#profile">Profile</a> </li>
+            <li><a href="./works.html">Works</a> </li>
+            <li><a href="#skill">Skill</a> </li>
+            <li><a href="./contact.html">Contact</a> </li>
+
+        </ul>
+        <!-- <img class="sp_center_logo2" src="./images/logo.png" alt="rogo"> -->
+    </nav>
+
+
     <!-- スマホ用メニュー -->
 
 
@@ -61,7 +76,7 @@
             </div>
 
             <img class="sp_main1" src=".//images/図面完成版.jpg" alt="mainvisual">
-            <div class="sp_main_flame"> <img class="sp_main2" src=".//images/SP top.webp" alt="main2_waku">
+            <div class="sp_main_flame"> <img class="sp_main2" src=".//images/SP top.png" alt="main2_waku">
                 <img class="sp_center_logo" src="./images/logo.png" alt="rogo">
             </div>
         </picture>
@@ -104,7 +119,7 @@
 
     </div>
     <div class="ask">
-        <a href="./contact.html"> <img class="ask_button" src=".//images/ask_button.png" alt="ask_button"></a>
+        <a href="./contact.html"> <img class="ask_button" src=".//images/追尾CV@72x.png" alt="ask_button"></a>
 
     </div>
     <div class="scroll">
@@ -112,7 +127,7 @@
 
     </div>
 
-    <section class="profile_section">
+    <section class="profile_section" id="profile">
 
 
 
@@ -336,8 +351,8 @@
                 method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
                 <div class="contactform_list">
                     <p class="form_topic">Name</p>
-                    <input name="entry.1331074417" class="c-form_input" id="field-name" placeholder="デザイン 太郎"
-                        type="text" required="required" />
+                    <input name="entry.1331074417" class="c-form_input" id="field-name" placeholder="お名前" type="text"
+                        required="required" />
                 </div>
 
 
@@ -411,7 +426,7 @@
         let submitted = false;
     </script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted){window.location='./thanks.html';}"></iframe>
+        onload="if(submitted){window.location='https://yutotototo1.github.io/portfolio/thanks.html';}"></iframe>
 
 
     <script>
@@ -488,7 +503,21 @@
 
     </script>
 
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $('.header_slider').slick({
+                // autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+        })
 
+    </script>
 </body>
 
 </html>

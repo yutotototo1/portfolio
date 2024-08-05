@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,28 @@
 
     </div>
 
+    <!-- スマホ用メニュー -->
+    <div class="sp_menu">
+        <div class="sp_btn">
+            <span></span>
+        </div>
+    </div>
 
+    <nav class="sp_nav">
+
+        <ul>
+            <li><a href="./index.html">Home</a> </li>
+            <li><a href="#profile">Profile</a> </li>
+            <li><a href="./works.html">Works</a> </li>
+            <li><a href="#skill">Skill</a> </li>
+            <li><a href="./contact.html">Contact</a> </li>
+
+        </ul>
+        <!-- <img class="sp_center_logo2" src="./images/logo.png" alt="rogo"> -->
+    </nav>
+
+
+    <!-- スマホ用メニュー -->
 
 
 
@@ -48,7 +70,21 @@
     <div class="copyright">
         <p>©atelier.web</p>
     </div>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $('.header_slider').slick({
+                // autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+        })
 
+    </script>
 
 
 </body>
