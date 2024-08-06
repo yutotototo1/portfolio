@@ -828,6 +828,7 @@ body {
 }
 .works3pop {
   width: 380px;
+  border: solid 1px #b5b5b5;
 }
 /* 900px以降は縦並びへ */
 /* ーーーーーーーーーーーーworks一覧ーーーーーーーーーーーーー */
