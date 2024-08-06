@@ -1,7 +1,5 @@
 @charset "utf-8";
-/* cssリセット */
-
-/*利用するタグによってこちらの内容は増やす*/
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 html,
 body,
@@ -18,18 +16,14 @@ li {
   margin: 0;
   padding: 0;
   line-height: 1;
-  /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #00053a;
   font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
 }
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-/* * {
+* {
   outline: 2px red solid;
 }
-めちゃくちゃ便利レイアウト崩れた時はこれ  */
-
 .js_curtain {
   width: 100vw;
   height: 100vh;
@@ -790,9 +784,9 @@ body {
   margin-top: 5px;
 }
 
-.works1 .works2 .works3 {
+/* .works1 .works2 .works3 {
   padding: 0 auto;
-}
+} */
 .works1 {
   width: 380px;
 }
@@ -830,7 +824,7 @@ body {
 }
 
 .works_each3 {
-  font-size: 1.25;
+  font-size: 1.25em;
   padding-top: 20px;
   line-height: 40px;
 }
@@ -1123,8 +1117,8 @@ body {
     display: none;
   }
   .profile_section {
-    margin-right: none;
-    margin-left: none;
+    margin-right: 0;
+    margin-left: 0;
   }
   .profile_design {
     display: none;
@@ -1447,6 +1441,7 @@ body {
   .works_each3 {
     padding-top: 0;
     line-height: 30px;
+    font-size: initial;
   }
 
   .works_each2 {
@@ -1483,5 +1478,13 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
