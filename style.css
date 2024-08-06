@@ -865,12 +865,41 @@ body {
 .sp_nav {
   display: none;
 }
+.js_curtain2 {
+  display: none;
+}
+
 /* -----------------works詳細ページーーーーーーーーーーーーー */
 /* 以下SP */
 
 /* SP表示 */
 
 @media screen and (max-width: 767px) {
+  .js_curtain {
+    display: none;
+  }
+  .js_curtain2 {
+    display: block;
+  }
+  .js_curtain_loading {
+    width: 90%;
+  }
+
+  .js_curtain2 {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out; /* フェードアウトのためのトランジション */
+    opacity: 1;
+  }
+
   .header_logo {
     width: 25%;
   }

@@ -22,7 +22,9 @@
         <img class="js_curtain_loading" src="./images/ローディング２.gif" alt="load">
     </div>
 
-
+    <div class="js_curtain2">
+        <img class="js_curtain_loading" src="./images/SPローディング.gif" alt="load">
+    </div>
 
     <div class="header_wrap">
 
@@ -539,6 +541,22 @@
                 // フェードアウト終了後に完全に非表示にする
                 setTimeout(function () {
                     document.querySelector(".js_curtain").style.display = "none";
+                }, 7000); // フェードアウト時間（1秒）を考慮
+            });
+        }
+        loadingAnimation();
+    </script>
+    <script>
+        function loadingAnimation() {
+            document.addEventListener("DOMContentLoaded", function () {
+                // 8秒経過で徐々にフェードアウト
+                setTimeout(function () {
+                    document.querySelector(".js_curtain2").style.opacity = "0";
+                }, 6000);
+
+                // フェードアウト終了後に完全に非表示にする
+                setTimeout(function () {
+                    document.querySelector(".js_curtain2").style.display = "none";
                 }, 7000); // フェードアウト時間（1秒）を考慮
             });
         }
