@@ -218,14 +218,13 @@ body {
 .profile_section {
   max-width: 1000px;
   position: relative;
-  /* margin-right: 150px; */
 }
 
 .profile_section .circle {
   width: 5%;
   height: 20px;
   position: absolute;
-  top: 27%;
+  top: 35%;
   right: 18%;
 }
 .profile_subtitle {
@@ -233,23 +232,20 @@ body {
   font-weight: 400;
   position: absolute;
   top: 8%;
-  left: 35%;
+  left: 45%;
   transform: translateX(-50%);
   color: #00053a;
   font-size: 1.9375em;
   text-align: center;
 
-  width: 100%; /* Full width to center the text */
-  z-index: 10; /* Ensure it is above the image */
+  width: 50%; /* Full width to center the text */
+  z-index: 1; /* Ensure it is above the image */
   /* ↑2行、消しても変わらず。何のため？時間があれば */
 }
 
 .profile_design {
-  /* margin-left: 300px;
-   */
-
   max-width: 100%; /* 画像の最大幅を親要素に合わせる */
-  height: auto; /* アスペクト比を維持 */
+  /* height: auto; アスペクト比を維持 */
   margin: 0 auto; /* 中央揃え */
 }
 .profile {
@@ -337,6 +333,7 @@ body {
 
 .profile_section {
   max-width: 1000px;
+  margin: 0 auto;
   /* position: relative; */
   /* margin-right: 150px;
   margin-left: auto; */
@@ -407,6 +404,13 @@ body {
   height: auto;
   max-width: 300px;
 }
+.slide_image1 {
+  border: solid 1px #b5b5b5;
+}
+
+.slide_image3ch {
+  border: solid 1px #b5b5b5;
+}
 
 .slide2 {
   max-width: 80%;
@@ -438,15 +442,14 @@ body {
   max-width: 1000px;
   position: relative;
   margin: 0 auto;
-  margin-left: 80px;
 }
 
 .works_section .circle {
   width: 5%;
   height: 20px;
   position: absolute;
-  top: 40%;
-  right: 32%;
+  top: 42%;
+  right: 37%;
 }
 
 .works_subtitle {
@@ -505,8 +508,8 @@ body {
   width: 5%;
   height: 20px;
   position: absolute;
-  top: 36%;
-  right: 16%;
+  top: 55%;
+  right: 22%;
 }
 
 .skill_subtitle {
@@ -514,7 +517,7 @@ body {
   font-weight: 400;
   position: absolute;
   top: 8%;
-  left: 35%;
+  left: 47%;
   transform: translateX(-50%);
   color: #00053a;
   font-size: 1.9375em;
@@ -598,7 +601,7 @@ body {
 
 .contact_design {
   margin: 0 auto;
-  max-width: 97.3%;
+  max-width: 100%;
 }
 .contact {
   display: flex;
@@ -826,7 +829,7 @@ body {
 .works_each3 {
   font-size: 1.25em;
   padding-top: 20px;
-  line-height: 40px;
+  line-height: 20px;
 }
 
 .back {
@@ -892,6 +895,10 @@ body {
     justify-content: center;
     transition: opacity 1s ease-in-out; /* フェードアウトのためのトランジション */
     opacity: 1;
+  }
+
+  .profile_line {
+    display: block;
   }
 
   .header_logo {
@@ -1140,6 +1147,7 @@ body {
     width: 42%;
     margin-top: 5px;
     padding-left: 0;
+    z-index: 1;
   }
 
   .profile_message_container {
@@ -1156,7 +1164,7 @@ body {
     top: 20px;
     left: 6.6%;
     text-align: initial;
-    width: 100px;
+    width: 50px;
   }
   .profile_top > div {
     padding-top: 12px;
@@ -1207,8 +1215,8 @@ body {
     width: 5%;
     height: 20px;
     position: absolute;
-    top: 9%;
-    right: 16%;
+    top: 35%;
+    right: 47%;
   }
 
   /* --------sp works------- */
@@ -1216,7 +1224,21 @@ body {
   .works_section {
     margin-left: 0;
   }
-
+  .works_subtitle {
+    font-size: 1.5em;
+    transform: none;
+    top: 20px;
+    left: 6.6%;
+    text-align: initial;
+    width: 50px;
+  }
+  .works_section .circle {
+    width: 5%;
+    height: 20px;
+    position: absolute;
+    top: 45%;
+    right: 47%;
+  }
   .works_menu {
     position: static;
     /* top: 140px; */
@@ -1230,6 +1252,7 @@ body {
     margin-right: 15px;
     margin-left: 15px;
     max-height: 440px;
+    z-index: 1;
   }
 
   .slideshow_container {
@@ -1275,6 +1298,14 @@ body {
     }
   }
 
+  .skill_subtitle {
+    font-size: 1.5em;
+    transform: none;
+    top: 20px;
+    left: 6.6%;
+    text-align: initial;
+    width: 50px;
+  }
   .skill_menu {
     position: static;
     top: 140px;
@@ -1283,6 +1314,9 @@ body {
     margin: 0 auto;
     max-width: 470px;
     width: 77%;
+  }
+  .skill_menu > div {
+    z-index: 1;
   }
 
   .ipad_skill {
@@ -1299,6 +1333,14 @@ body {
   .skill_list_container > div {
     margin-bottom: 11.5%;
     font-size: 0.875em;
+  }
+
+  .skill_section .circle {
+    width: 5%;
+    height: 20px;
+    position: absolute;
+    top: 45%;
+    right: 47%;
   }
 
   /* ------sp_contact-------- */
